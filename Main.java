@@ -6,5 +6,6 @@ public class Main {
         userReg.validFirstName();
         userReg.validLastName();
         userReg.validEmailName();
+        userReg.validPhoneNumber();
     }
 }

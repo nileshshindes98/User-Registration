@@ -45,6 +45,19 @@ public void validFirstName(){
         }else{
             System.out.println("Not valid");
         }
+    }
 
+    public void validPhoneNumber(){
+        Pattern pattern = Pattern.compile("^[+][9][1]\\s[6-9][0-9]{9}+$");
+        System.out.print("Enter Your Phone Number : ");
+        Scanner sc = new Scanner(System.in);
+        String PhoneNumber = sc.nextLine();
+
+        Matcher matcher = pattern.matcher(PhoneNumber);
+        if(matcher.matches()){
+            System.out.println("Phone Number is valid");
+        }else{
+            System.out.println("Not valid");
+        }
     }
 }
