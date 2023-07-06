@@ -60,4 +60,18 @@ public void validFirstName(){
             System.out.println("Not valid");
         }
     }
+
+    public void validPassword(){
+        Pattern pattern = Pattern.compile("^[a-z]{8,}+$");
+        System.out.print("Enter Your Password : ");
+        Scanner sc = new Scanner(System.in);
+        String Password = sc.nextLine();
+
+        Matcher matcher = pattern.matcher(Password);
+        if(matcher.matches()){
+            System.out.println("Password is valid");
+        }else{
+            System.out.println("Not valid");
+        }
+    }
 }
