@@ -5,5 +5,6 @@ public class Main {
         UserRegistration userReg = new UserRegistration();
         userReg.validFirstName();
         userReg.validLastName();
+        userReg.validEmailName();
     }
 }

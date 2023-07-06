@@ -23,11 +23,25 @@ public void validFirstName(){
         Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
         System.out.print("Enter Last Name : ");
         Scanner sc = new Scanner(System.in);
-        String firstName = sc.nextLine();
+        String LastName = sc.nextLine();
 
-        Matcher matcher = pattern.matcher(firstName);
+        Matcher matcher = pattern.matcher(LastName);
         if(matcher.matches()){
             System.out.println("Last name is valid");
+        }else{
+            System.out.println("Not valid");
+        }
+
+    }
+    public void validEmailName(){
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+        System.out.print("Enter Mail ID : ");
+        Scanner sc = new Scanner(System.in);
+        String MailID = sc.nextLine();
+
+        Matcher matcher = pattern.matcher(MailID);
+        if(matcher.matches()){
+            System.out.println("EMail ID is valid");
         }else{
             System.out.println("Not valid");
         }
