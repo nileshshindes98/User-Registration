@@ -61,7 +61,7 @@ public class UserRegistration {
     }
 
     public void validPassword(){
-        Pattern pattern = Pattern.compile("^\\p{Upper}[a-z]{8,}\\p{Digit}+$");
+        Pattern pattern = Pattern.compile("^\\p{Upper}[a-z]{8,}\\p{Punct}\\p{Digit}+$");
         System.out.print("Enter Your Password : ");
         Scanner sc = new Scanner(System.in);
         String Password = sc.nextLine();
