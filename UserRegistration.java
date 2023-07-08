@@ -62,7 +62,7 @@ public void validFirstName(){
     }
 
     public void validPassword(){
-        Pattern pattern = Pattern.compile("^[a-z]{8,}+$");
+        Pattern pattern = Pattern.compile("^\\p{Upper}[a-z]{8,}+$");
         System.out.print("Enter Your Password : ");
         Scanner sc = new Scanner(System.in);
         String Password = sc.nextLine();
