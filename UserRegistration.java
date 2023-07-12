@@ -32,17 +32,49 @@ public class UserRegistration {
         }
 
     }
-    public void validEmailName(){
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
-        System.out.print("Enter Mail ID : ");
-        Scanner sc = new Scanner(System.in);
-        String MailID = sc.nextLine();
+    public void validEmailName() {
+        {
+            System.out.println("Example of Valid Email Format : abcdefgh@gmail.com");
+            Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+            System.out.print("Enter Mail ID : ");
+            Scanner sc = new Scanner(System.in);
+            String MailID = sc.nextLine();
 
-        Matcher matcher = pattern.matcher(MailID);
-        if(matcher.matches()){
-            System.out.println("EMail ID is valid");
-        }else{
-            System.out.println("Not valid");
+            Matcher matcher = pattern.matcher(MailID);
+            if (matcher.matches()) {
+                System.out.println("EMail ID is valid");
+            } else {
+                System.out.println("Not valid");
+            }
+        }
+        {
+            System.out.println("Example of Valid Email Format : \n"+"1) abc-100@yahoo.com\n"+"2) abc.100@yahoo.com");
+            Pattern pattern = Pattern.compile("^[a-z\\p{Punct}0-9+_.-]+@[a-zA-Z0-9.-]+$");
+            System.out.print("Enter Mail ID : ");
+            Scanner sc = new Scanner(System.in);
+            String MailID = sc.nextLine();
+
+            Matcher matcher = pattern.matcher(MailID);
+            if (matcher.matches()) {
+                System.out.println("EMail ID is valid");
+            } else {
+                System.out.println("Not valid");
+            }
+        }
+
+        {
+            System.out.println("Example of Valid Email Format : abc111@abc.com");
+            Pattern pattern = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+            System.out.print("Enter Mail ID : ");
+            Scanner sc = new Scanner(System.in);
+            String MailID = sc.nextLine();
+
+            Matcher matcher = pattern.matcher(MailID);
+            if (matcher.matches()) {
+                System.out.println("EMail ID is valid");
+            } else {
+                System.out.println("Not valid");
+            }
         }
     }
 
@@ -61,6 +93,8 @@ public class UserRegistration {
     }
 
     public void validPassword(){
+        System.out.println("Password should be in this format : Example :- Abcdefgh@1");
+
         Pattern pattern = Pattern.compile("^\\p{Upper}[a-z]{8,}\\p{Punct}\\p{Digit}+$");
         System.out.print("Enter Your Password : ");
         Scanner sc = new Scanner(System.in);
