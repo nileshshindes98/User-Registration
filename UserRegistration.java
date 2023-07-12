@@ -63,7 +63,7 @@ public class UserRegistration {
         }
 
         {
-            System.out.println("Example of Valid Email Format : abc111@abc.com");
+            System.out.println("Example of Valid Email Format :\n"+"abc111@abc.com");
             Pattern pattern = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");
             System.out.print("Enter Mail ID : ");
             Scanner sc = new Scanner(System.in);
